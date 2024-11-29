@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Percabangan IF-ELSE 3</title>
+  </head>
+  <body>
+    <script language="javascript">
+      <!--
+      function hitungip() {
+        var quis = parseFloat(document.fform.iquis.value);
+        var tugas = parseFloat(document.fform.itugas.value);
+        var uts = parseFloat(document.fform.iuts.value);
+        var uas = parseFloat(document.fform.iuas.value);
+        var ip = " ";
+        var ket = " ";
+
+        var na = 0.1 * quis + 0.2 * tugas + 0.3 * uts + 0.4 * uas;
+        if (na > 80 && na <= 100) {
+          ip = "A";
+          ket = "Lulus Dengan Sangat Baik";
+        } else if (na > 68 && na <= 80) {
+          ip = "B";
+          ket = "Lulus Sangat Baik";
+        } else if (na > 55 && na <= 68) {
+          ip = "C";
+          ket = "Lulus Dengan Cukup";
+        } else if (na < 38 && na <= 55) {
+          ip = "D";
+          ket = "Lulus Dengan Kurang";
+        } else {
+          ip = "E";
+          ket = "Tidak Lulus";
+        }
+
+        document.fform.oip.value = ip;
+        document.fform.oket.value = ket;
+        alert(ip + "" + na);
+      }
+      -->
+    </script>
+
+    <form name="fform">
+      <table border="1" width="100" align="center">
+        <tr>
+          <td width="100" colspan="4">
+            <h2 align="center">Menghitung Indeks Prestasi</h2>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="25">
+            Quis (10) :<input type="text" size="10" name="iquis" />
+          </td>
+          <td width="25">
+            Tugas (10) :<input type="text" size="10" name="itugas" />
+          </td>
+          <td width="25">
+            Uts (10) :<input type="text" size="10" name="iuts" />
+          </td>
+          <td width="25">
+            Uas (10) :<input type="text" size="10" name="iuas" />
+          </td>
+        </tr>
+
+        <tr>
+          <td width="100" colspan="4">
+            <p align="center">
+              <input type="button" value="kirim" onclick="hitungip()" />
+              <input type="reset" value="ulang" />
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="100" colspan="4" align="center">
+            <pre>
+            Indeks Prestasi :<input type="text" size="5" name="oip" />
+            Keterangan :<input type="text" size="25" name="oket" />
+          </pre>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

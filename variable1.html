@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tugas pak wildan</title>
+    <script language="JavaScript">
+      function calculate(operation) {
+        var bil1 = parseFloat(document.fform.bilangan1.value);
+        if (isNaN(bil1)) bil1 = 0;
+        var bil2 = parseFloat(document.fform.bilangan2.value);
+        if (isNaN(bil2)) bil2 = 0;
+
+        var hasil;
+        switch (operation) {
+          case "add":
+            hasil = bil1 + bil2;
+            alert("Hasil Penambahan = " + hasil);
+            break;
+          case "subtract":
+            hasil = bil1 - bil2;
+            alert("Hasil Pengurangan = " + hasil);
+            break;
+          case "multiply":
+            hasil = bil1 * bil2;
+            alert("Hasil Perkalian = " + hasil);
+            break;
+          case "divide":
+            if (bil2 === 0) {
+              alert("Pembagian dengan nol tidak diperbolehkan.");
+            } else {
+              hasil = bil1 / bil2;
+              alert("Hasil Pembagian = " + hasil);
+            }
+            break;
+          default:
+            alert("Operasi tidak dikenali.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="fform">
+      <h1><br />Memasukan Data Lewat Keyboard</h1>
+      <pre>
+            Bilangan Pertama :<input type="text" size="11" name="bilangan1">
+            Bilangan Kedua :<input type="text" size="11" name="bilangan2">
+        </pre>
+    </form>
+    <input type="button" value="Jumlahkan" onclick="calculate('add')" />
+    <input type="button" value="Pengurangan" onclick="calculate('subtract')" />
+    <input type="button" value="Perkalikan" onclick="calculate('multiply')" />
+    <input type="button" value="Pembagian" onclick="calculate('divide')" />
+    <input type="reset" value="Ulang" />
+  </body>
+</html>

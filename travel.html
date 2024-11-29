@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Program Travel Revan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script language="JavaScript">
+      function hitungtotal() {
+        var nama = document.fform.inama.value;
+        var tujuan = document.fform.itujuan.value;
+        var kelas = document.fform.ikelas.value;
+        var jumlahtiket = parseFloat(document.fform.ijumlah.value);
+        var ht = 0.0;
+        var sub = 0.0;
+        var diskon = 0.0;
+        var total = 0.0;
+
+        if (tujuan == "Jakarta") {
+          ht = 900000;
+        }
+        if (tujuan == "Banjar") {
+          ht = 850000;
+        }
+        if (tujuan == "Solo") {
+          ht = 800000;
+        } else if (tujuan == "Surabaya") {
+          ht = 750000;
+        }
+        if (tujuan == "BalikPapan") {
+          ht = 700000;
+        } else if (tujuan == "Bogor") {
+          ht = 650000;
+        }
+        if (tujuan == "Cimahi") {
+          ht = 600000;
+        } else if (tujuan == "Bandung") {
+          ht = 1000000;
+        } else {
+          ht = 10000;
+        }
+
+        if (kelas == "Eksekutif") {
+          ht = 90000;
+        } else if (tujuan == "Bisnis") {
+          ht += 60000;
+        } else {
+          ht += 30000;
+        }
+
+        sub = jumlahtiket * ht;
+
+        if (document.fform.imember.checked) {
+          diskon = 0.1 * sub;
+        } else {
+          diskon = 0.0;
+        }
+
+        total = sub - diskon;
+
+        document.fform.otiket.value = ht;
+        document.fform.osub.value = sub;
+        document.fform.odiskon.value = diskon;
+        document.fform.ototal.value = total;
+
+        // output
+        alert(total);
+      }
+    </script>
+
+    <div class="fContainer">
+      <nav class="wrapper">
+        <div class="brand">
+          <div class="firstname">x</div>
+          <div class="lastname">pplg3</div>
+        </div>
+        <ul class="navigation">
+          <li><a href="travel.html">Home</a></li>
+          <li><a href="semuatugasbapak.html">Semester1</a></li>
+          <li><a href="index.html">biodata</a></li>
+          <li><img src="revan.jpg" alt="error" /></li>
+        </ul>
+      </nav>
+    </div>
+<center>
+    <div class="pContainer">
+      <form name="fform">
+        <table border="1" align="center" width="70%" class="profile-border">
+          <tr class="border-color">
+            <td colspan="2">
+              <div class="profile-logo">
+                <img
+                  class="logo-profile"
+                  src="smkangkasa1margahayu.png"
+                  alt="error anda belom menambahkan poto"
+                />
+              </div>
+              <h2 align="center" class="judul-pragraf">Travel Bintang Abadi</h2>
+            </td>
+          </tr>
+          <tr class="border-color2">
+            <td>
+              <pre>
+Nama               : <input type="text" size="20" name="inama">
+Tujuan             : <select size="1" name="itujuan">
+                        <option value="Jakarta">Jakarta</option>
+                        <option value="Banjar">Banjar</option>
+                        <option value="Solo">Solo</option>
+                        <option value="Surabaya">Surabaya</option>
+                        <option value="BalikPapan">BalikPapan</option>
+                        <option value="Bogor">Bogor</option>
+                        <option value="Cimahi">Cimahi</option>
+                        <option value="Bandung">Bandung</option>
+                    </select>
+Kelas              : <select size="1" name="ikelas">
+                        <option value="Eksekutif">Eksekutif</option>
+                        <option value="Bisnis">Bisnis</option>
+                        <option value="Ekonomi">Ekonomi</option>
+
+                    </select>
+Jumlah Tiket       : <input type="text" size="11" name="ijumlah">
+Member             : <input type="checkbox" name="imember"> Ya
+                    </pre>
+            </td>
+            <td>
+              <pre>
+Harga Tiket        : <input type="text" size="10" name="otiket">
+Sub Total          : <input type="text" size="10" name="osub">
+Diskon             : <input type="text" size="10" name="odiskon">
+Total Bayar        : <input type="text" size="10" name="ototal">
+                    </pre>
+            </td>
+          </tr>
+          <tr class="border-color1">
+            <td colspan="2">
+            </center>
+              <center>
+                <input
+                  type="button"
+                  value="Kirim"
+                  onclick="hitungtotal()"
+                  class="input-color1"
+                />
+                <input type="reset" value="Ulang" class="input-color2" />
+              </center>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

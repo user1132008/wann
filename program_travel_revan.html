@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Program Travel Revan</title>
+  </head>
+  <body>
+    <script language="JavaScript">
+      function hitungtotal() {
+        var nama = document.fform.inama.value;
+        var tujuan = document.fform.itujuan.value;
+        var jumlahtiket = parseFloat(document.fform.ijumlah.value);
+        var ht = 0.0;
+        var sub = 0.0;
+        var diskon = 0.0;
+        var total = 0.0;
+
+        if (tujuan == "Jakarta") {
+          ht = 100000;
+        } else if (tujuan == "Cirebon") {
+          ht = 150000;
+        } else {
+          ht = 200000;
+        }
+
+        sub = jumlahtiket * ht;
+
+        if (document.fform.imember.checked) {
+          diskon = 0.1 * sub;
+        } else {
+          diskon = 0.0;
+        }
+
+        total = sub - diskon;
+
+        document.fform.otiket.value = ht;
+        document.fform.osub.value = sub;
+        document.fform.odiskon.value = diskon;
+        document.fform.ototal.value = total;
+
+        // output
+        alert(total);
+      }
+    </script>
+
+    <form name="fform">
+      <table border="1" align="center" width="70%">
+        <tr>
+          <td colspan="2">
+            <h2 align="center">Travel Bintang Abadi</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <pre>
+Nama               : <input type="text" size="20" name="inama">
+Tujuan             : <select size="1" name="itujuan">
+                        <option value="Jakarta">Jakarta</option>
+                        <option value="Cirebon">Cirebon</option>
+                        <option value="Tasikmalaya">Tasikmalaya</option>
+                    </select>
+Jumlah Tiket       : <input type="text" size="11" name="ijumlah">
+Member             : <input type="checkbox" name="imember"> Ya
+                    </pre>
+          </td>
+          <td>
+            <pre>
+Harga Tiket        : <input type="text" size="10" name="otiket">
+Sub Total          : <input type="text" size="10" name="osub">
+Diskon             : <input type="text" size="10" name="odiskon">
+Total Bayar        : <input type="text" size="10" name="ototal">
+                    </pre>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <center>
+              <input type="button" value="Kirim" onclick="hitungtotal()" />
+              <input type="reset" value="Ulang" />
+            </center>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

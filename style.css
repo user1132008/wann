@@ -1,0 +1,176 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.fContainer {
+  width: 1370px;
+  height: 17vh;
+  display: flex;
+}
+
+.wrapper {
+  width: 10000px;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 15px;
+  height: 80px;
+  display: flex;
+  background-color: #222;
+  box-shadow: 0 7px 15px 0 rgb(0, 0, 0, 0.5);
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5em;
+  padding: 15px;
+  text-transform: capitalize;
+}
+
+.firstname {
+  color: white;
+  font-weight: 700;
+}
+
+.lastname {
+  color: crimson;
+  font-weight: 400;
+  padding-left: 4px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation > li {
+  list-style-type: none;
+  padding: 30px;
+}
+
+.navigation > li > a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.navigation > li > a:hover {
+  color: crimson;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.navigation > li > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.navigation > li > img:hover {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  -ms-border-radius: 70px;
+  -o-border-radius: 70px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.pContainer {
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-border {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-color: cyan;
+}
+
+td pre {
+  font-style: oblique;
+}
+
+.profile-logo {
+  text-align: center;
+}
+
+.logo-profile {
+  border: 10px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  -o-border-radius: 150px;
+  width: 150px;
+  height: 150px;
+}
+
+.judul-pragraf {
+  font-family: Arial;
+  font-style: bold;
+  text-shadow: 1px 1px 2px cyan;
+}
+
+.border-color {
+  background-color: cornsilk;
+}
+
+.border-color1 {
+  background-color: cornsilk;
+}
+
+.border-color2 {
+  background-color: cornsilk;
+}
+
+.input-color1 {
+  background-color: cyan;
+  font-family: bold;
+  border: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-size: 0.89rem;
+  font-weight: 700;
+  margin: 1px 0;
+  padding: 5px 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.input-color2 {
+  background-color: cyan;
+  font-family: bold;
+  border: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-size: 0.89rem;
+  font-weight: 700;
+  margin: 1px 0;
+  padding: 5px 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
